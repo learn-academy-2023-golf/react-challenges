@@ -1,16 +1,17 @@
-import React from "react"
+import React from "react";
+import "./Favorite.css";
 const Favorite = () => {
-    return (
+  return (
     <>
-    <p>Metal Bands</p>
-    <ol>
+      <h3>Metal Bands</h3>
+      <ol>
         <li>Opeth</li>
         <li>Polyphia</li>
         <li>Baroness</li>
         <li>August Burns Red</li>
         <li>The Dillinger Escape Plan</li>
-    </ol>
+      </ol>
     </>
-    )
-}
-export default Favorite
+  );
+};
+export default Favorite;

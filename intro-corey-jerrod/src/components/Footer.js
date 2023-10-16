@@ -1,9 +1,10 @@
-import React from "react"
+import React from "react";
+import "./Favorite.css";
 const Footer = () => {
-    return (
+  return (
     <>
-    <footer>Golf 2023</footer>
+      <footer>Golf 2023</footer>
     </>
-    )
-}
-export default Footer
+  );
+};
+export default Footer;
