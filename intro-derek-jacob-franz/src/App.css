@@ -1,0 +1,18 @@
+h1{
+  color :rgb(205, 243, 255);
+  text-align : center;
+}
+
+p {
+background-color: blueviolet;
+font-family: cursive;
+
+}
+
+body {
+  background-color:lawngreen;
+}
+
+div  {
+  text-align: center;
+}
