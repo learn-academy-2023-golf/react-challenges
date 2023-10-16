@@ -1,0 +1,65 @@
+.App {
+  font-family: Creepster;
+  font-size: 36px;
+  background-color: black;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;  
+}
+
+h1 {
+  text-align: center;
+  color: orange
+}
+
+h2 {
+  text-align: center;
+  color: orange
+}
+
+h3 {
+  text-align: center;
+  color: orange
+}
+
+img {
+  display: block;
+  margin: auto;
+  filter: drop-shadow(15px 15px 10px orange);
+  animation: rotation 6s infinite linear 
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  color: orange;
+  margin: 0;
+  padding: 0
+}
+
+.Player {
+  margin: auto;
+  width: 20%
+}
+
+footer {
+  text-align: center;
+  color: orange
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1210.ani), url(https://cur.cursors-4u.net/games/gam-13/gam1210.png), auto !important;} /* End https://www.cursors-4u.com */
