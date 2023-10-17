@@ -1,0 +1,44 @@
+.color-box {
+  border: 2px solid black;
+  height: 200px;
+  width: 200px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+}
+
+h1 {
+  color: palevioletred;
+  text-align: center;
+  text-decoration: underline;
+}
+
+button {
+  color:pink;
+  background-color: black;
+  display:block
+}
+
+body {
+  background-color:black;
+
+}
+
+h2 {
+  color:pink;
+  text-align: center;
+}
+
+p {
+  color:yellow;
+  text-align:center;
+}
+
+.color-name {
+  color:black
+}
+
+div {
+  margin:auto;
+}
