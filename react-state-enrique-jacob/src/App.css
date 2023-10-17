@@ -1,0 +1,13 @@
+.counter-box {
+  border: 2px solid black;
+  height: 200px;
+  width: 200px;
+}
+.counters {
+  /*background-color: white;*/
+  display:flex;
+  justify-content: space-around;
+}
+h1 {
+text-align: center;
+}
