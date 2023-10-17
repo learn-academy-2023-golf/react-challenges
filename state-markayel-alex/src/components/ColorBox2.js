@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-const ColorBox1 = () => {
-  const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"];
+const ColorBox2 = () => {
+  const colors = [ "blue", "purple", "pink","red","orange", "yellow", "green",];
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
 
-  const ColorBox = () => {
+  const Box = () => {
     setCurrentColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
   };
 
@@ -13,7 +13,7 @@ const ColorBox1 = () => {
   return (
     <>
       <div
-        onClick={ColorBox}
+        onClick={Box}
         style={{
           backgroundColor: currentColor,
         }}
@@ -25,4 +25,4 @@ const ColorBox1 = () => {
   );
 };
 
-export default ColorBox1;
+export default ColorBox2;
