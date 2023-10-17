@@ -1,0 +1,19 @@
+div {
+  border: 1px solid rgb(255, 255, 255);
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.left {
+  margin-left: -110%;
+  margin-top: -303%;
+}
+
+button {
+  background-color: rgb(222, 184, 135);
+
+}
+button:hover {
+  background-color: blue;
+}
