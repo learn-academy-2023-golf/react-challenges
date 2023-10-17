@@ -11,6 +11,10 @@ const App = () => {
     <h1>Counter Application</h1>
     <div className="counters">
     <Counter />
+    <div>
+    <Counter />
+    </div>
+    <Counter />
     </div>
     </>
   )
