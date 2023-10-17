@@ -16,11 +16,17 @@ const App = () => {
   }
 
   return (
-    <>
+<>
+
+    <div>
       <button onClick={addBoxes}>Add Box</button>
-      <button onClick={removeBoxes}>Remove Box</button>
+    <button onClick={removeBoxes}>Remove Box</button>
+
+    </div>
+    <div className="counters">
       {boxes}
-    </>
+      </div>
+      </>
   );
 };
 

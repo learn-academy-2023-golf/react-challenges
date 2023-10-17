@@ -2,7 +2,14 @@
   border: 2px solid black;
   height: 200px;
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
+.counter-box>*{
+  flex: 1 1 80px;
+}
+
 
 .counters {
   display: flex;
