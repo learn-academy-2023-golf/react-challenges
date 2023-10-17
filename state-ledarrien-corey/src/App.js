@@ -1,26 +1,27 @@
-import React, { useState } from "react"
-import "./App.css"
+import React, { useState } from "react";
+import Box from "./components/Box";
+import "./App.css";
+
 const App = () => {
-  const [color, setColor] = useState("white")
-  const [index, setIndex] = useState(0)
-  const backgroundColors =["white", "black"]
-  const changeColor = () => {
-  if (index === backgroundColors.length - 1){
-    return setIndex(0) 
-  } else{
-    return setIndex(index  + 1)
-}
+  const [boxes, setBoxes] = useState([])
+
+  const addBoxes = () => {
+    setBoxes([...boxes, <Box />])
   }
-  const handleClick = () => {
-    changeColor(backgroundColors[index])
-    setColor(backgroundColors)
+
+  const removeBoxes = () => {
+    const lessBoxes = [...boxes]
+    lessBoxes.pop()
+    setBoxes(lessBoxes)
   }
 
   return (
-    <div onClick={handleClick} className="counter-box">
-    {color}
-    </div>
-  )
-}
+    <>
+      <button onClick={addBoxes}>Add Box</button>
+      <button onClick={removeBoxes}>Remove Box</button>
+      {boxes}
+    </>
+  );
+};
 
-export default App
+export default App;
