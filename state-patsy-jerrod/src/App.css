@@ -9,4 +9,6 @@
   margin: auto;
   display: flex;
   justify-content: space-around;
+  /* display: none; */
 }
+
