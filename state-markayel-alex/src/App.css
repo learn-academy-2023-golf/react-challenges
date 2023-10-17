@@ -1,0 +1,23 @@
+h1 {
+  height: 200px;
+  width: 200px;
+}
+
+h1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.counter-box {
+  border: 2px solid black;
+  height: 200px;
+  width: 200px;
+}
+
+h2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+
