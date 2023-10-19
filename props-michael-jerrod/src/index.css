@@ -8,9 +8,9 @@
 
 /* Square Box */
 .square-box {
-  width: 150px;
-  height: 150px;
-  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  border: 5px solid black;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@
 /* List of Rolls */
 ul {
   list-style: none;
-  padding: 0;
+  padding: 5;
 }
 
 li {

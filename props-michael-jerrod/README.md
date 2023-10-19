@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+ <!-- creat a functional component named "App".
+
+ Inside the component, create state variables "rolls" and "currentRoll" using the useState hook.
+
+ Create an array named "diceFaces" containing file paths to dice face images.
+
+Create a function named "rollDice" to simulate rolling a dice:
+   a. Generate a random number between 1 and 6 to represent the roll result.
+   b. Set the "currentRoll" state to the generated roll result.
+   c. Update the "rolls" state by adding the new roll result to the existing array of rolls.
+
+Create a function named "clearRollLog" to reset the roll log:
+   a. Set the "rolls" state to an empty array to clear the roll log.
+   b. Set the "currentRoll" state to null to clear the current roll result.
+
+   a. Display an "h1" element with the text "Dice Game".
+   b. Create a container div with a class "app-container" for the app content.
+   c. Render the "Dice" component with the following props:
+      - "currentRoll" to display the current roll result
+      - "rollDice" to trigger the rollDice function
+      - "diceFaces" to provide the array of dice face image paths
+   d. Render the "RollLog" component with the following props:
+      - "rolls" to display the roll log
+      - "clearRollLog" to trigger the clearRollLog function.
+ End the component definition. -->
