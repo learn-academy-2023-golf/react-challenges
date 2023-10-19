@@ -1,6 +1,24 @@
 .appLayout{
     border: 2px solid black;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    padding-top: 65px;
 }
 
+.rollStyle {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+}

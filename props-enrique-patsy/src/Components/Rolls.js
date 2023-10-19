@@ -2,7 +2,7 @@ import React from 'react'
 
 const Rolls = (props) => {
     return(
-     <h3>currentRoll: {props.currentRoll}</h3>  
+     <h1>{props.currentRoll}</h1> 
     )
 }
 export default Rolls
