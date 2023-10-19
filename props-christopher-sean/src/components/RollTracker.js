@@ -1,20 +1,12 @@
 import React, {useState} from 'react'
 
-const RollTracker = () => {
-
-    const [diceLog, setDiceLog] = useState([]);
-
-    const addDiceRecord = () => {
-        const newDiceRecord = "NewDiceRecord"
-        setDiceLog([...diceLog, newDiceRecord])
-    };
-
+const RollTracker = (props) => {
 
     return (
     <>
         <div className = "rollrecord">
-            {diceLog}
-            <button onClick = {addDiceRecord}>Add a Record</button>
+            {props.diceLog}
+            <button >Add a Record</button>
         </div>
     </>
     )

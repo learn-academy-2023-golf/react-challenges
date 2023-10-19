@@ -10,3 +10,10 @@
   height: 200px;
   width: 200px;
 }
+
+.dicecontrol{
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
