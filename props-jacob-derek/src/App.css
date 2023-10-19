@@ -1,0 +1,27 @@
+.dice {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  margin-left: 20%;
+  margin-top: 20%;
+}
+
+.roll-log {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  margin-left: 60%;
+  margin-top: -34.5%;
+}
+
+h2 {
+  margin-top: -15%;
+}
+
+.roll-log ul {
+  font-size: 8px;
+  margin-left: -60%;
+}
+
