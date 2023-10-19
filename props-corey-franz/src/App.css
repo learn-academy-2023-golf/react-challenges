@@ -1,0 +1,14 @@
+.DiceBlock {
+  border: 2px solid black;
+  height: 200px;
+  width:  200px;
+}
+
+.DiceLog {
+  border: 2px solid black;
+  height: 200px;
+  width:  200px;
+  display:flex;
+  flex-flow: column wrap;
+  word-wrap: break-word;
+}
