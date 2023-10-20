@@ -10,15 +10,21 @@ import React, {useState} from 'react'
 
     // the state of the current roll
     const [currentRoll, setCurrentRoll] = useState (0)
-
-    // function to roll the dice
+   // function to roll the dice
     const rollDice = () => {
      // random rolls
+    this.roll= []
     let diceRoll = Math.floor(Math.random() * rolls.length)
     console.log(diceRoll)
     // updates the current roll
     setCurrentRoll(rolls[diceRoll])
+    this.roll.push(diceRoll)
     }
+  }
+
+    
+    
+    
     // returns the app layout and components(dice and rolls)
     return (
       <><div className = "appLayout">
