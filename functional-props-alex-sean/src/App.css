@@ -1,0 +1,38 @@
+.foodsize {
+height: 50px;
+width: 50px;
+}
+
+.AppDiv {
+  background-color: #FAF0CA;
+  text-align:
+}
+
+html {
+  background-color: #0D3B66
+}
+
+h1 {
+  text-align: 
+}
+
+h2 {
+  text-align: right;
+}
+
+.p1 {
+  text-align: right;
+}
+
+.p2 {
+  text-align: right;
+}
+
+.ordereditem {
+  display: flex; 
+  justify-content: right;
+}
+
+.button {
+ text-align: right;
+}
