@@ -1,30 +1,42 @@
+import './App.css'
 import React, {useState} from 'react'
 import MenuItem from './components/MenuItem'
+import OrderedItem from './components/OrderedItem'
+import imageHamburger from './assets/Hamburger.avif'
+import imageHotdog from './assets/Hotdog.jpeg'
+import imageSoda from './assets/Soda.png'
 
 const App = () => {
   const salesTax = 0.0775
   const [totalPrice, setTotalPrice] = useState(0)
-  const totalWithTax = totalPrice*(1+salesTax)
+  const totalWithTax = (totalPrice*(1+salesTax)).toFixed(2)
 
   const [menu, setMenu] = useState([
-    {name: "Hamburger", price: 5},
-    {name: "Hot Dog", price: 4},
-    {name: "Soda", price: 3}
+    {name: "Hamburger", price: 5, imgSrc: imageHamburger},
+    {name: "Hot Dog", price: 4, imgSrc: imageHotdog},
+    {name: "Soda", price: 3, imgSrc: imageSoda}
     ])
 
-  const [orderedItems, setOrderedItems] = useState([])
+  const [shoppingCart, setShoppingCart] = useState([])
 
-  const addToOrder = (selectedItem, index) => {
+  const addToOrder = (selectedItem) => {
     console.log(1)
-    var foodName={selectedItem.name}
-    const newItem = 1
+    var foodName=menu[selectedItem].name 
+    var foodPrice=menu[selectedItem].price
+    var foodImageSrc=menu[selectedItem].imgSrc
+    const newItem = <OrderedItem foodName={foodName} foodPrice={foodPrice} foodImageSrc={foodImageSrc} />
 
-    setTotalPrice(totalPrice+selectedItem.price)
-    setOrderedItems([...orderedItems, newItem])  
+    setTotalPrice(totalPrice+menu[selectedItem].price)
+    setShoppingCart([...shoppingCart, newItem])  
+  }
+
+  const clearShoppingCart = () => {
+    setShoppingCart([])
+    setTotalPrice(0)
   }
 
   return <>
-  <div>
+  <div className='AppDiv'>
     <h1>Menu</h1>
     {menu.map((foodItem, index) => {
       return <MenuItem
@@ -35,10 +47,11 @@ const App = () => {
       />
     })}
     <br></br>
-    <h2>Ordered Items</h2>
-    {orderedItems}
-    <p>Total Price: ${totalPrice}</p>
-    <p>Total with Sales Tax: ${totalWithTax}</p>
+    <h2>Shopping Cart</h2>
+    {shoppingCart}
+    <p className='p1'>Total Price: ${totalPrice} </p>
+    <p className='p2'>Total with Sales Tax: ${totalWithTax}</p>
+    <p className='button'><button onClick={clearShoppingCart}>Clear Shopping Cart</button></p>
   </div>
   </>
 }
