@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import MenuItem from './components/MenuItem'
-
 const App = () => {
   const [menu, setMenu] = useState([
     {name: "Cheese Burger", ordered: false, price: "5.99"},
@@ -9,7 +8,7 @@ const App = () => {
     {name: "Onion Rings", ordered: false, price: "3.99"},
     {name: "Waygu Burger", ordered: false, price: "15.99"}
   ])
-
+  const [totalCost, setTotalCost] = useState(0)
   const orderItem = (selectedItem) => {
     console.log(selectedItem)
     // find item by index using bracket notation in the menu array
@@ -18,16 +17,23 @@ const App = () => {
     menu[selectedItem].ordered = true
     // Spread operator makes a copy of menu with the update value and then we set state with the updated array
     setMenu([...menu])
-  }
 
+    //setTotal(newTotalCost)
+  }
+  let newTotalCost = 0
+  if (menu.ordered){
+    const price = parseFloat(menu.price.replace('$', ''))
+    newTotalCost += price
+  }
+  
   return(
     <>
       <h1> Big Time Burgers </h1>
       <h2>Menu</h2>
       {menu.map((item, index) => {
-        return( 
-          <MenuItem 
-            item={item} 
+        return(
+          <MenuItem
+            item={item}
             orderItem={orderItem}
             index={index}
             key={index}
@@ -36,6 +42,5 @@ const App = () => {
       })}
     </>
   )
-}
-
+    }
 export default App
