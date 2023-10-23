@@ -11,13 +11,7 @@ const App = () => {
     {name: "Chicken", price: 7},
     {name: "Tacos", price: 9},
   ])
-  const [order, setOrder] = useState([
-    {amount: 0, itemName: "TEST", total: 0},
-    {amount: 0, itemName: "TEST", total: 0},
-    {amount: 0, itemName: "TEST", total: 0},
-    {amount: 0, itemName: "TEST", total: 0},
-    {amount: 0, itemName: "TEST", total: 0}
-  ])
+  const [order, setOrder] = useState([])
 
   const orderItem = (selectedItem) => {
         console.log(selectedItem)
@@ -25,7 +19,7 @@ const App = () => {
         if(order.some((obj) => obj.itemName === food[selectedItem].name)){
           console.log("has value")
           console.log(food[selectedItem].name)
-          const currentIndex = order.indexOf(food[selectedItem].name)
+          const currentIndex = order.findIndex((obj) => obj.itemName === food[selectedItem].name)
           console.log(currentIndex)
           order[currentIndex].amount = order[currentIndex].amount + 1
           order[currentIndex].itemName = food[selectedItem].name
@@ -39,6 +33,13 @@ const App = () => {
         setOrder([...order])
 
   }  
+
+  const sumTotal = order.reduce((accumulator, object) => {
+    return accumulator + object.total
+  }, 0)
+  console.log("🍕")
+
+  const grandTotal = (sumTotal * .07 + sumTotal).toFixed(2)
 
   return (
   <>
@@ -68,7 +69,8 @@ const App = () => {
           })}
           
         </table>
-        <h3>GRAND TOTAL - </h3>
+        <h3>Sum Total - ${sumTotal}</h3>
+        <h2>Grand Total - ${grandTotal}</h2>
       </div>
   </>
   )
