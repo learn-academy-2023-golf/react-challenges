@@ -1,25 +1,27 @@
-import React, {useState} from "react"
-
-
 const Robot2 = (props) => {
-    const [blaIndex, setBlaIndex] = useState(0)
-    const [robotOutput, setRobotOutput] = useState("")
-    const bla = ["B", "L", "A"]
-    const robotBla = (userInput) => {
-        for (let i = 0; i < userInput.length; i++){
-            if (blaIndex = 3) {
-                setBlaIndex(0)
-            }
-            setRobotOutput(robotOutput + bla[blaIndex])
-            setBlaIndex(blaIndex + 1)
-        } 
+  let blaIndex = 0;
+  let robotOutput = "";
+  const bla = ["B", "L", "A"];
+  console.log("blaIndex", blaIndex);
+  console.log("robotOutput", robotOutput);
+  console.log("bla", bla);
+  const robotBla = (human) => {
+    for (let i = 0; i < human.length; i++) {
+      if (blaIndex === 3) {
+        blaIndex = 0;
+      } else {
+        robotOutput = (robotOutput + bla[blaIndex]);
+        blaIndex = (blaIndex + 1);
+      }
     }
-    return (
-        <>
-        <h2>Robot2</h2>
-        <p>{robotBla(props.userInput)}</p>
-        </>
-    )
-}
+    return robotOutput
+  };
+  return (
+    <>
+      <h2>Robot2</h2>
+      <p>{robotBla(props.userInput)}</p>
+    </>
+  );
+};
 
-export default Robot2
+export default Robot2;
