@@ -1,0 +1,25 @@
+html {
+  background-color: black;
+}
+
+h1 {
+  color: #D97EB0;
+  text-align: center;
+}
+
+h2 {
+  color: #D97EB0;
+}
+
+p {
+  color: #A7DDF2;
+}
+
+.maindiv {
+  text-align: center;
+}
+
+.catrobot {
+  width: 600px;
+  margin: auto;
+}
